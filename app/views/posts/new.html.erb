@@ -1,0 +1,21 @@
+<section>
+  <div class="post">
+    <h2>Добавление нового поста.</h2>
+    <!-- Создание формы с хелпером -->
+    <%= form_for :post, url: posts_path do |f| %>
+
+    <p>Название поста.<br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>Содержимое поста.<br>
+      <%= f.text_area :body %>
+    </p>
+
+    <p>Создать пост:<br>
+      <%= f.submit%>
+    </p>
+
+    <% end %>
+  </div>
+</section>
